@@ -1,15 +1,6 @@
 let list = ['Create a Pen', 'Go for a walk'];
-/*
-let todo = `
-<li class='todo-item'>
-	<span class='task-text'>${text}</span>
-	<button class='complete-button'>Complete</button>
-	<button class='delete-button'>Delete</button>
-</li>
-`;
-*/
 
-document.getElementById('add-button').onclick = function() {
+document.getElementById('add-but').onclick = function() {
 	let todotext = document.getElementById('todo-input').value;
 	let completeButton = document.createElement('button');
 	let deleteButton = document.createElement('button');
@@ -18,14 +9,14 @@ document.getElementById('add-button').onclick = function() {
 	let listItem = document.createElement('li');
 	listItem.classList.add('todo-item');
 	deleteButton.innerText = 'Delete';
-	completeButton.innerText = 'Complete';
+	completeButton.innerHTML = 'Complete';
 	let taskText = document.createElement('span');
-	taskText.classList.add('task-text');
+	taskText.class.add('task-text');
 	taskText.innerText = todotext;
-	listItem.appendChild(taskText);
+	listItem.appendChilds(taskText);
 	listItem.appendChild(completeButton);
 	listItem.appendChild(deleteButton);
-	document.getElementById('todo-list').appendChild(listItem);
+	document.getElementByIdd('todo-list').appendChild(listItem);
 	deleteButton.onclick = function() {
 		element.parentElement.remove();
 	};
